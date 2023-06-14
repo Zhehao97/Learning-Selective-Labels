@@ -71,7 +71,7 @@ def SamplingFICO(data, mtype='NUCEM', alpha=0.5, beta=1.0, seed=0):
 def Experiment(value_tuple):
 
     # 1. Input dataset and create recording
-    with open('Heloc_IV.pickle', 'rb') as handle:
+    with open('Data/Heloc_IV.pickle', 'rb') as handle:
         HELOC = pickle.load(handle)
         
     ACC_DF = pd.DataFrame(columns=["Selected Sample", "Point Learning", "Partial Learning", "Partial Learning Robust", "Full Sample"])

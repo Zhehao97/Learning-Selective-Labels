@@ -13,7 +13,7 @@ def Standardization(df):
 # =============================================================================
 
 # input original data
-HelocData = pd.read_csv("Heloc/heloc_dataset_v1.csv")
+HelocData = pd.read_csv("Data/heloc_dataset_v1.csv")
 
 # factorize category variable
 HelocData['RiskPerformance'] = pd.factorize(HelocData["RiskPerformance"])[0]
@@ -64,10 +64,16 @@ OutputData['Residuals'] = residuals
 OutputData['Z'] = experts
 # OutputData.hist()
 
+
 # Output new dataframe
-with open('Heloc_IV_2.pickle', 'wb') as handle:
+with open('Data/Heloc_IV.pickle', 'wb') as handle:
     pickle.dump(OutputData, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-with open('Heloc_IV_2.pickle', 'rb') as handle:
+# with open('Data/Heloc_IV.pickle', 'rb') as handle:
+
+
+
+
+
     TmpData = pickle.load(handle)
